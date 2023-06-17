@@ -13,7 +13,14 @@ app.get("/", (req, res) => {
 
     console.log(ip)
 
-    res.send(ip)
+    if (ip === "13.51.109.231") {
+        res.send("Ip Connected done", ip)
+
+    } else {
+        res.send("not Connected", ip)
+    }
+
+
 
 })
 
