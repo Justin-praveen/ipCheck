@@ -6,7 +6,7 @@ const app = express()
 
 app.get("/", (req, res) => {
 
-    res.send(req.ip)
+    res.send(req.socket.remoteAddress)
 
 })
 
