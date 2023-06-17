@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 
     console.log(ip)
 
-    res.send(ip.ip)
+    res.send(ip)
 
 })
 
