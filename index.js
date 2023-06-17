@@ -1,12 +1,19 @@
 const express = require("express");
 
 
-
 const app = express()
 
 app.get("/", (req, res) => {
 
-    res.send(req.socket.remoteAddress)
+    const ip =
+        req.headers['cf-connecting-ip'] ||
+        req.headers['x-real-ip'] ||
+        req.headers['x-forwarded-for'] ||
+        req.socket.remoteAddress || '';
+
+    res.json({
+        ip
+    })
 
 })
 
