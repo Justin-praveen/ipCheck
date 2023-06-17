@@ -11,9 +11,9 @@ app.get("/", (req, res) => {
         req.headers['x-forwarded-for'] ||
         req.socket.remoteAddress || '';
 
-    res.json({
-        ip
-    })
+    console.log(ip)
+
+    res.send(ip.ip)
 
 })
 
