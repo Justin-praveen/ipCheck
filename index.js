@@ -11,9 +11,9 @@ app.get("/", (req, res) => {
         req.headers['x-forwarded-for'] ||
         req.socket.remoteAddress || '';
 
-    console.log(ip)
+    console.log(typeof ip)
 
-    if (ip === "13.51.109.231") {
+    if (ip === "16.170.141.217") {
         res.send("Ip Connected done")
 
     } else {
