@@ -14,10 +14,10 @@ app.get("/", (req, res) => {
     console.log(typeof ip)
 
     if (ip === "13.48.13.41") {
-        res.send("Ip Connected done")
+        res.sendFile(__dirname + "/Done.html");
 
     } else {
-        res.send("not Connected")
+        res.sendFile(__dirname + "/offline.html");
     }
 
 
